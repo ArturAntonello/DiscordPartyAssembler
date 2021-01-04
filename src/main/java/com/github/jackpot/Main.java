@@ -16,7 +16,7 @@ public class Main {
         FallbackLoggerConfiguration.setTrace(true);
 
         DiscordApi api = new DiscordApiBuilder()
-                .setToken("Nzk1MjA5NjgyMzY4MzMxNzk3.X_GCug.WbtkojTeAixecVLhAq-EwXi3cTI")
+                .setToken("INSERT BOT TOKEN HERE")
                 .login().join();
 
         api.addListener(new MyListener());

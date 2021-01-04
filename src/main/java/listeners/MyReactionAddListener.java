@@ -14,6 +14,8 @@ public class MyReactionAddListener implements ReactionAddListener {
         }
     }
 
+    public long botID = 795209682368331797L; //Change to the current ID of the bot
+
     public void addUserToSquad(long reactionUser, ReactionAddEvent event)
     {
             //check if the squad has any open slot
@@ -21,7 +23,7 @@ public class MyReactionAddListener implements ReactionAddListener {
             int openSlotIndex = fullMsg.indexOf("<OPEN>");
             //user is not already on the squad
             if (openSlotIndex != -1 &&
-                    reactionUser != 795209682368331797L &&
+                    reactionUser != botID &&
                     !fullMsg.contains(Long.toString(reactionUser))) {
                 String messageStart = fullMsg.substring(0, openSlotIndex).replace("Optional[", "");
                 String messageEnd = fullMsg.substring(openSlotIndex + 6, fullMsg.length() - 1);
